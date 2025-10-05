@@ -1,4 +1,6 @@
-/// werid way to link objects and stuff
+//unusal linking of objects and stuff in java 
+// you can create the object in another class
+
 class AA{
    int data = 10;
    AA newObjofAA = null;
@@ -22,23 +24,23 @@ public class LinkOfLists {
             CC newObjofCC = new CC(); // same here like normal newObjofAA (newObjofBB != newObjofAA.newObjofBB(i mean the one side the class))
 
             newObjofAA.data = 2033;
-
             AA newObjofAAnewinstance = new AA();
             newObjofAAnewinstance.data=200;
 
              System.out.println(newObjofAA);
              System.out.println(newObjofAA.newObjofAA);
 
-            newObjofAA.newObjofAA = newObjofAAnewinstance; // you can do this
+            newObjofAA.newObjofAA = newObjofAAnewinstance; // you can do this (swapping data of new instance into the self referenital class of AA)
             System.out.println(newObjofAA.data); //2033
             System.out.println(newObjofAA.newObjofAA.data); //200  essentially you same name kinda
 
-
+        //calling BB using CC object 
+        
         CC newObjectCC = new CC();
         System.out.println(newObjectCC.data); //40
         //created BB instance in CC already
         System.out.println(newObjectCC.insideObjoffCC_BB.data); //30
-        newObjectCC.insideObjoffCC_BB.displayBB_output(); //this is a data 30  bascially 30 
+        newObjectCC.insideObjoffCC_BB.displayBB_output(); //this is a data 30  bascially 30
 
     }
 }
